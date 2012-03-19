@@ -1,0 +1,102 @@
+[0.001][INFO]:      ChromeDriver 18.0.1022.0 F:\Seema\eclipse-jee-indigo\eclipse\chromedriver.exe
+[0.978][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.switches": [ "--load-extension=C:\\Program Files (x8..." ],
+   "platform": "ANY",
+   "version": ""
+}
+
+[0.979][INFO]:      Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --ignore-certificate-errors --homepage=about:blank --load-extension="C:\Program Files (x86)\Google\Chrome\Application\17.0.963.79\default_apps"
+[5.635][INFO]:      Connected to Chrome successfully. Version: 17.0.963.79
+[5.730][FINE]:      Command received (/session/2ad9337b87ed3733cd38e1e1399a5a83)
+[5.731][FINE]:      Command finished (/session/2ad9337b87ed3733cd38e1e1399a5a83) with response {
+   "sessionId": "2ad9337b87ed3733cd38e1e1399a5a83",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "18.0.1022.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "windows",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "17.0.963.79",
+      "webStorageEnabled": false
+   }
+}
+
+[5.737][FINE]:      Command received (/session/2ad9337b87ed3733cd38e1e1399a5a83/url) with params {
+   "url": "localhost:8080/tdd/login.jsp"
+}
+
+[5.738][FINER]:     Waiting for all views to stop loading...
+[6.837][FINER]:     Done waiting for all views to stop loading
+[7.300][FINER]:     Waiting for all views to stop loading...
+[7.307][FINER]:     Done waiting for all views to stop loading
+[7.307][FINE]:      Command finished (/session/2ad9337b87ed3733cd38e1e1399a5a83/url) with response {
+   "sessionId": "2ad9337b87ed3733cd38e1e1399a5a83",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[7.313][FINE]:      Command received (/session/2ad9337b87ed3733cd38e1e1399a5a83/element) with params {
+   "using": "partial link text",
+   "value": "Neil Armstrong"
+}
+
+[7.313][FINER]:     Waiting for all views to stop loading...
+[7.314][FINER]:     Done waiting for all views to stop loading
+[7.351][FINER]:     Waiting for all views to stop loading...
+[7.351][FINER]:     Done waiting for all views to stop loading
+[7.351][FINE]:      Command finished (/session/2ad9337b87ed3733cd38e1e1399a5a83/element) with response {
+   "sessionId": "2ad9337b87ed3733cd38e1e1399a5a83",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1332069428446"
+   }
+}
+
+[7.355][FINE]:      Command received (/session/2ad9337b87ed3733cd38e1e1399a5a83/element/:wdc:1332069428446/click) with params {
+   "id": ":wdc:1332069428446"
+}
+
+[7.355][FINER]:     Waiting for all views to stop loading...
+[7.356][FINER]:     Done waiting for all views to stop loading
+[7.433][FINER]:     Waiting for all views to stop loading...
+[7.703][FINER]:     Done waiting for all views to stop loading
+[7.703][FINE]:      Command finished (/session/2ad9337b87ed3733cd38e1e1399a5a83/element/:wdc:1332069428446/click) with response {
+   "sessionId": "2ad9337b87ed3733cd38e1e1399a5a83",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[7.708][FINE]:      Command received (/session/2ad9337b87ed3733cd38e1e1399a5a83/element) with params {
+   "using": "id",
+   "value": "blotters"
+}
+
+[7.708][FINER]:     Waiting for all views to stop loading...
+[7.708][FINER]:     Done waiting for all views to stop loading
+[7.756][FINER]:     Waiting for all views to stop loading...
+[7.756][FINER]:     Done waiting for all views to stop loading
+[7.756][FINE]:      Command finished (/session/2ad9337b87ed3733cd38e1e1399a5a83/element) with response {
+   "sessionId": "2ad9337b87ed3733cd38e1e1399a5a83",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1332069428850"
+   }
+}
+
+[7.760][FINE]:      Command received (/session/2ad9337b87ed3733cd38e1e1399a5a83)
