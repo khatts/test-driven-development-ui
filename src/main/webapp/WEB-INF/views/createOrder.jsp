@@ -6,14 +6,14 @@
     <title>TDD - Equity Order Management Manager</title>
 </head>
 <style>
-body
+/* body
 {
 font-size:7pt !important;
 font-family:Palatino, serif;
 background-color:#FFFFF0;
 color:#000080;
 margin:10px;
-} 
+}  */
 .inputFont{
 font-family:Times, serif;
 font-size:normal;
@@ -26,11 +26,10 @@ td {
 	font-size:10pt !important;
 }
 .errors{
-font-size:10pt !important;
+font-size:12pt !important;
 font-family:Palatino, serif;
 background-color:#FFFFF0;
 color:red;
-font-weight: bold;
 }
 .dropdown{
 height:25px;
@@ -43,6 +42,14 @@ max-width:100px;
 }
 #qty,#stopPrice,#limitPrice{
 width:75px;
+}
+#Save{
+font-family:Times, serif;
+font-size:12pt !important;
+background-color:#FFFFF0;
+color:#000080;
+font-weight: bold
+
 }
 
 </style>
@@ -108,7 +115,6 @@ width:75px;
 			<form:select  id="portfolios" path="portfolio.name" multiple="false" cssStyle="font-family:Times, serif;font-size:normal;height:25px;width:200;"> 
 				 <form:options items="${portfolios}" />
 			</form:select>
-			<%-- <img id="addPortfolio" src="<%= request.getContextPath()%>/css/images/addition.gif" alt="Add Portfolio"/> --%>
 			<a id="addPortfolio" href="#" style="font-family:Times, serif;font-size:normal;background-color:#FFFFF0;color:#000080;">Add</a>
 		</td>
 		 
@@ -139,10 +145,12 @@ width:75px;
 		 <td><form:textarea path="notes" rows="5" cols="40" cssStyle="font-family:Times, serif;font-size:normal;"/></td>
 		 <td><form:errors path="notes" cssClass="errors"/></td>
 	</tr>
-	<tr>
-		<td align="center" colspan="3"> <strong><input  id="Save" type="button" value="Save" /></strong></td>
+	</table>
+	<table>
+	<tr align="center">
+		<td align="center"><strong><input id="Save" type="button" value="Save" /></strong></td>
 	</tr>    
-</table>
+	</table>
 </div>
 </form:form>
 <div id="dialog-form" title="Add Portfolio">

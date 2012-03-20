@@ -6,14 +6,14 @@
     <title>TDD - Equity Order Management Manager</title>
 </head>
 <style>
-/* body
+ /* body
 {
 font-size:7pt !important;
 font-family:Palatino, serif;
 background-color:#FFFFF0;
 color:#000080;
 margin:10px;
-} */
+}  */
 
 /* tr{
 height:20px;

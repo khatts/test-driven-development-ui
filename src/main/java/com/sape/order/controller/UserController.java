@@ -25,13 +25,14 @@ import com.sape.order.vo.User;
 @Controller
 @SessionAttributes("user")
 public class UserController {
-	
-	@RequestMapping(value="/login",method=RequestMethod.GET)
+
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	@ModelAttribute("user")
-	public ModelAndView userBeAbleToAccessEquityOrder(@RequestParam String userId,@RequestParam String roleName,@RequestParam String userName,ModelMap model){
-		System.out.println("User "+ userId + "Role Name "+ roleName + "userName: "+ userName);
+	public ModelAndView userBeAbleToAccessEquityOrder(
+			@RequestParam String userId, @RequestParam String roleName,
+			@RequestParam String userName, ModelMap model) {
 		Role role = new Role(RoleType.PortfolioManageAccess);
-		if(RoleType.trader.toString().equalsIgnoreCase(roleName)){
+		if (RoleType.trader.toString().equalsIgnoreCase(roleName)) {
 			role.setType(RoleType.trader);
 		}
 		User user = new User();
@@ -39,17 +40,18 @@ public class UserController {
 		user.setUserId(userId);
 		user.setRole(role);
 		model.addAttribute("user", user);
-		model.put("user",user);
+		model.put("user", user);
 		return new ModelAndView("equityOrder");
 	}
-	@RequestMapping(value="/privilege",method=RequestMethod.GET)
-	public @ResponseBody String isUSerAbleToAccessOrders(HttpSession session,SessionStatus status){
-		User user = (User)session.getAttribute("user");
-		System.out.println("User in session : "+ user.getUserId());
-		Map<String,String> privileges = new HashMap<String, String>();
-		privileges.put("name",user.getRole().getType().toString());
-		JSONArray jsonArray = JSONArray.fromObject( privileges);
-		System.out.println("JSON Array : " +jsonArray);
+
+	@RequestMapping(value = "/privilege", method = RequestMethod.GET)
+	public @ResponseBody
+	String isUSerAbleToAccessOrders(HttpSession session, SessionStatus status) {
+		User user = (User) session.getAttribute("user");
+		Map<String, String> privileges = new HashMap<String, String>();
+		privileges.put("name", user.getRole().getType().toString());
+		JSONArray jsonArray = JSONArray.fromObject(privileges);
+		System.out.println("JSON Array : " + jsonArray);
 		return jsonArray.toString();
 
 	}

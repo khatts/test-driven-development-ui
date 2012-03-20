@@ -30,8 +30,8 @@ margin:10px;
   <script src="<%= request.getContextPath()%>/js/equityOrder.js"></script> 
 <body>
  <form:form id="user" name="user" modelAttribute="user" commandName="user" >
-<table align="right" ,style="width:10%;">
-<%-- <tr><td><b><form:input readonly="true" id="name" path="name" cssStyle="background-color:#FFFFF0;color:#000080;"/></b></td></tr> --%>
+<table align="right" ,
+style="width:10%;font-size:12pt !important;font-family:Palatino, serif;background-color:#FFFFF0;color:#000080;margin:10px;">
 <tr><td><b><a href="/tdd/login.jsp">Logout</a></b></td></tr>
 </table>
 </form:form> 

@@ -29,46 +29,22 @@
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-core</artifactId>
   		<version>${org.springframework.version}</version>
-  		<exclusions>
-  			<exclusion>
-  				<groupId>org.springframework</groupId>
-  				<artifactId>spring</artifactId>
-  			</exclusion>
-  		</exclusions>
 	</dependency>
 	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-beans</artifactId>
   		<version>${org.springframework.version}</version>
-  		<exclusions>
-  			<exclusion>
-  				<groupId>org.springframework</groupId>
-  				<artifactId>spring</artifactId>
-  			</exclusion>
-  		</exclusions>
 	</dependency>
 	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-aop</artifactId>
   		<version>${org.springframework.version}</version>
-  		<exclusions>
-  			<exclusion>
-  				<groupId>org.springframework</groupId>
-  				<artifactId>spring</artifactId>
-  			</exclusion>
-  		</exclusions>
 	</dependency>
 	
 	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-context</artifactId>
   		<version>${org.springframework.version}</version>
-  		<exclusions>
-  			<exclusion>
-  				<groupId>org.springframework</groupId>
-  				<artifactId>spring</artifactId>
-  			</exclusion>
-  		</exclusions>
 	</dependency>
 	<dependency>
   		<groupId>org.springframework</groupId>
@@ -79,33 +55,16 @@
  		 <groupId>org.springframework</groupId>
   		 <artifactId>spring-webmvc</artifactId>
  		 <version>${org.springframework.version}</version>
- 		 <exclusions>
-  			<exclusion>
-  				<groupId>org.springframework</groupId>
-  				<artifactId>spring</artifactId>
-  			</exclusion>
-  		</exclusions>
 	</dependency>
 	<dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version>
     </dependency>
-   <!--  <dependency>
-      <groupId>taglibs</groupId>
-      <artifactId>standard</artifactId>
-      <version>1.1.2</version>
-    </dependency> -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.1.2</version>
-      <exclusions>
-  			<exclusion>
-  				<groupId>org.springframework</groupId>
-  				<artifactId>spring</artifactId>
-  			</exclusion>
-  		</exclusions>
     </dependency>
     <dependency>
          <groupId>javax.validation</groupId>
@@ -146,40 +105,19 @@
     	<version>1.1</version>
 	</dependency>
     
-            
-	
-	<!-- <dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.6.2</version>
-	</dependency>
-	<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>1.6.2</version>
-			<scope>runtime</scope>
-	</dependency> -->
 	<dependency>
 		<groupId>org.slf4j</groupId>
 		<artifactId>slf4j-log4j12</artifactId>
 		<version>1.5.6</version>
 	</dependency>
-   
-   
-    
     <dependency>
     	<groupId>net.sf.json-lib</groupId>
     	<artifactId>json-lib</artifactId>
     	<version>2.4</version>
     	<classifier>jdk15</classifier>
 	</dependency>
-	<!-- <dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-mapper-asl</artifactId>
-			<version>1.7.1</version>
-	</dependency> -->
-	
   </dependencies>
+  
   <repositories>
         <repository>
             <id>openqa</id>
@@ -197,15 +135,15 @@
   <build>
     <finalName>test-driven-development-ui</finalName>
     <plugins>
-    <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-				</configuration>
-	</plugin>
-  	<plugin>
+    	<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<source>1.5</source>
+				<target>1.5</target>
+			</configuration>
+		</plugin>
+  		<plugin>
   			<groupId>org.mortbay.jetty</groupId>
   			<artifactId>jetty-maven-plugin</artifactId>
   			<configuration>
@@ -214,73 +152,64 @@
       				<contextPath>/tdd</contextPath>
      			</webApp>
         	</configuration>
-	</plugin>
-	<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<excludes>
-            			<exclude>**/selenium/*.java</exclude>  
-					</excludes>
-				</configuration>
-				<executions>  
-  					<execution>  
-  						<id>integration-tests</id>  
-  						<phase>integration-test</phase>  
-  						<goals>  
-   							<goal>test</goal>  
-  						</goals>  
-  						<configuration>  
-   							<skip>false</skip>  
-   							<excludes>  
-    							<exclude>none</exclude>  
-   							</excludes>  
-   							<includes>  
-    							<include>**/selenium/*.java</include>  
-   							</includes>  
-   						</configuration>  		
-  					</execution>  
- 				</executions>  
 		</plugin>
-	 <plugin>
-    	<groupId>org.codehaus.mojo</groupId>
-    	<artifactId>selenium-maven-plugin</artifactId>
-    	<version>2.2</version>
-    	<executions>
-        	<execution>
-            	<phase>pre-integration-test</phase>
-            	<goals>
-                	<goal>start-server</goal>
-            	</goals>
-            	<configuration>
-	                <background>true</background>
-	               <!--  <port>8090</port> -->
-    	        </configuration>
-        	</execution>
+		<plugin>
+    		<groupId>org.codehaus.mojo</groupId>
+    		<artifactId>selenium-maven-plugin</artifactId>
+    		<version>2.2</version>
+    		<executions>
+        		<execution>
+            		<phase>pre-integration-test</phase>
+            		<goals>
+                		<goal>start-server</goal>
+            		</goals>
+            		<configuration>
+	                	<background>true</background>
+    	        	</configuration>
+        		</execution>
         	<execution>  
-   				<id>stop</id>  
-   				<phase>post-integration-test</phase>  
-   				<goals>  
-    				<goal>stop-server</goal>  
-   				</goals>  
+   					<id>stop</id>  
+   					<phase>post-integration-test</phase>  
+   					<goals>  
+    					<goal>stop-server</goal>  
+   					</goals>  
   			</execution>
-    	</executions>
-	</plugin> 
-	<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>emma-maven-plugin</artifactId>
-				<version>1.0-alpha-3</version>
-	</plugin>
-  </plugins>
+    		</executions>
+		</plugin> 
+		<plugin>
+        	<artifactId>maven-failsafe-plugin</artifactId>
+        	<version>2.6</version>
+        	<executions>
+          		<execution>
+            		<goals>
+              			<goal>integration-test</goal>
+              			<goal>verify</goal>
+            		</goals>
+            	<configuration>
+   					<includes>
+ 						<include>**/selenium/*.java</include>
+					</includes>
+   				</configuration>
+          		</execution>
+        	</executions>
+      	</plugin>
+  	</plugins>
   </build>
   <reporting>
 		<plugins>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>emma-maven-plugin</artifactId>
-				<version>1.0-alpha-3</version>
-			</plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-surefire-report-plugin</artifactId>
+        	<version>2.12</version>
+        	<reportSets>
+          	<reportSet>
+            	<id>integration-tests</id>
+            	<reports>
+              		<report>failsafe-report-only</report>
+            	</reports>
+        	</reportSet>
+        	</reportSets>
+      </plugin>
 		</plugins>
 	</reporting>
-  
 </project>

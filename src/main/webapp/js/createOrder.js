@@ -64,39 +64,13 @@ $("#addPortfolio").click(function(){
 	return false;
 	
 });
-
-$('form[name="createOrder"]').submit(function(e){
-	alert("Inside submit"+$('#createOrder').serializeArray());
-	e.preventDefault();
-	$.ajax({
-			type: "POST",
-	        url: "/tdd/equity/order/create",
-	        data: $('#createOrder').serializeArray(),
-	        success: function(data) {
-				alert("Inside success"+data);
-				
-
-				$("#orderTable").html(data);//.append(data);
-	        },
-	        error:function(data){
-	        	alert("Inside error"+data);
-	        	
-	        }
-		});
-});
 $("#Save").click(function(e){
-	alert("Before submitting :"+$('form[name="createOrder"]').serializeArray());
 		$.ajax({
 			type: "POST",
 	        url: "/tdd/equity/order/create",
 	        data: $('form[name="createOrder"]').serializeArray(),
 	        success: function(data) {
-				alert("Inside success"+data);
-				$("#orderTable").html(data);//.append(data);
-	        },
-	        error:function(data){
-	        	alert("Inside error"+data);
-	        	
+				$("#orderTable").html(data);
 	        }
 		});
 		
