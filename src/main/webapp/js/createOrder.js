@@ -75,3 +75,6 @@ $("#Save").click(function(e){
 		});
 		
 });
+$(window).bind('beforeunload', function() {
+	return 'You have made changes on this page that you have not yet confirmed.';
+});
