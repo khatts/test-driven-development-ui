@@ -8,6 +8,9 @@ $(document).ready(function() {
     	   loadBlotters();
        }
     });
+   $("a[id^='logout']" ).click(function(){
+		$(window).unbind();
+	});
 	
 });
 function loadOrders(){

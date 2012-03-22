@@ -32,7 +32,7 @@ margin:10px;
  <form:form id="user" name="user" modelAttribute="user" commandName="user" >
 <table align="right" ,
 style="width:10%;font-size:12pt !important;font-family:Palatino, serif;background-color:#FFFFF0;color:#000080;margin:10px;">
-<tr><td><b><a href="/tdd/login.jsp">Logout</a></b></td></tr>
+<tr><td><b><a id="logout" href="/tdd/login.jsp">Logout</a></b></td></tr>
 </table>
 </form:form> 
 <div id="equities" style="width:80%;top:0px;">
