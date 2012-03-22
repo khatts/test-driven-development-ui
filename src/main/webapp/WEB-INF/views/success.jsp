@@ -16,8 +16,14 @@ margin:10px;
 </tr>
 <tr/>
 <tr>	
-	<td align="right" style="font-family:Times, serif;font-size:normal;"><a href="/tdd/equity/order">Create Again</a></td>
+	<td align="right" style="font-family:Times, serif;font-size:normal;"><a id ="new" href="/tdd/equity/order">Create Again</a></td>
 </tr>	
 </table>
 </body>
+<script>
+	$("#new").click(function(e){
+		$(window).unbind();
+		
+});
+</script>
 </html>
